@@ -16,6 +16,7 @@ import javax.ws.rs.core.Configuration;
 
 import org.eclipse.ecf.core.ContainerTypeDescription;
 import org.eclipse.ecf.core.IContainer;
+import org.eclipse.ecf.core.identity.ID;
 import org.eclipse.ecf.core.util.ECFException;
 import org.eclipse.ecf.provider.jaxrs.JaxRSContainerInstantiator;
 import org.eclipse.ecf.provider.jaxrs.client.JaxRSClientContainer;
@@ -27,6 +28,10 @@ import org.eclipse.ecf.remoteservice.IRemoteService;
 import org.eclipse.ecf.remoteservice.client.RemoteServiceClientRegistration;
 
 public class ResteasyClientContainer extends JaxRSClientContainer {
+
+	public ResteasyClientContainer(ID containerID, Configuration configuration, int jacksonPriority) {
+		super(containerID, configuration, jacksonPriority);
+	}
 
 	public static final String CONTAINER_TYPE_NAME = "ecf.container.client.resteasy";
 

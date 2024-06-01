@@ -39,7 +39,7 @@
       <plugin id="com.fasterxml.jackson.module.jackson-module-jaxb-annotations"/>
       <plugin id="com.sun.activation.javax.activation"/>
       <plugin id="jakarta.annotation-api"/>
-      <plugin id="jakarta.ws.rs-api"/>
+      <plugin id="javax.ws.rs-api"/>
       <plugin id="jakarta.xml.bind-api"/>
       <plugin id="javassist"/>
       <plugin id="javax.annotation"/>

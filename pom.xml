@@ -12,7 +12,7 @@
 
 
 	<prerequisites>
-		<maven>3.1.1</maven>
+		<maven>3.9.2</maven>
 	</prerequisites>
 
 
@@ -70,121 +70,15 @@
 	</distributionManagement>
 
 	<properties>
-		<tycho-version>1.7.0</tycho-version>
-		<cbi-version>1.1.3</cbi-version>
-		<target-platform>jaxrs-2020-12</target-platform>
+		<tycho-version>4.0.8</tycho-version>
+		<cbi-version>1.4.3</cbi-version>
+		<target-platform>jaxrs-2024-03</target-platform>
 		<project.build.sourceEncoding>ISO-8859-1</project.build.sourceEncoding>
 		<project.resources.sourceEncoding>ISO-8859-1</project.resources.sourceEncoding>
 		<tycho.scmUrl>scm:git:https://git.eclipse.org/r/ecf/org.eclipse.ecf</tycho.scmUrl>
 		<!-- Skip tests by default because they take a long time -->
 		<skipTests>true</skipTests>
 	</properties>
-
-	<pluginRepositories>
-		<pluginRepository>
-			<id>eclipse-2019-12</id>
-			<url>http://download.eclipse.org/releases/2019-12</url>
-			<layout>p2</layout>
-		</pluginRepository>
-	</pluginRepositories>
-
-	<dependencies>
-		<dependency>
-			<groupId>com.sun.activation</groupId>
-			<artifactId>jakarta.activation</artifactId>
-			<version>1.2.1</version>
-		</dependency>
-		<dependency>
-			<groupId>javax.validation</groupId>
-			<artifactId>validation-api</artifactId>
-			<version>1.1.0.Final</version>
-		</dependency>
-		<dependency>
-			<groupId>com.sun.activation</groupId>
-			<artifactId>javax.activation</artifactId>
-			<version>1.2.0</version>
-		</dependency>
-		<dependency>
-			<groupId>javax.xml.bind</groupId>
-			<artifactId>jaxb-api</artifactId>
-			<version>2.2.12</version>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.cxf</groupId>
-			<artifactId>cxf-core</artifactId>
-			<version>3.3.4</version>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.cxf</groupId>
-			<artifactId>cxf-rt-frontend-jaxrs</artifactId>
-			<version>3.3.4</version>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.cxf</groupId>
-			<artifactId>cxf-rt-transports-http</artifactId>
-			<version>3.3.4</version>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.ws.xmlschema</groupId>
-			<artifactId>xmlschema-core</artifactId>
-			<version>2.2.1</version>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.cxf</groupId>
-			<artifactId>cxf-rt-rs-client</artifactId>
-			<version>3.3.4</version>
-		</dependency>
-		<dependency>
-			<groupId>org.glassfish.jersey.containers</groupId>
-			<artifactId>jersey-container-servlet</artifactId>
-			<version>2.30.1</version>
-		</dependency>
-		<dependency>
-			<groupId>org.glassfish.jersey.inject</groupId>
-			<artifactId>jersey-hk2</artifactId>
-			<version>2.30.1</version>
-		</dependency>
-		<dependency>
-			<groupId>org.glassfish.jersey.media</groupId>
-			<artifactId>jersey-media-json-jackson</artifactId>
-			<version>2.30.1</version>
-		</dependency>
-		<dependency>
-			<groupId>javax.ws.rs</groupId>
-			<artifactId>javax.ws.rs-api</artifactId>
-			<version>2.1.1</version>
-		</dependency>
-		<dependency>
-			<groupId>com.fasterxml.jackson.core</groupId>
-			<artifactId>jackson-annotations</artifactId>
-			<version>2.10.1</version>
-		</dependency>
-		<dependency>
-			<groupId>com.fasterxml.jackson.core</groupId>
-			<artifactId>jackson-databind</artifactId>
-			<version>2.10.1</version>
-		</dependency>
-		<dependency>
-			<groupId>com.fasterxml.jackson.module</groupId>
-			<artifactId>jackson-module-jaxb-annotations</artifactId>
-			<version>2.10.1</version>
-		</dependency>
-		<dependency>
-			<groupId>com.fasterxml.jackson.jaxrs</groupId>
-			<artifactId>jackson-jaxrs-base</artifactId>
-			<version>2.10.1</version>
-		</dependency>
-		<dependency>
-			<groupId>com.fasterxml.jackson.jaxrs</groupId>
-			<artifactId>jackson-jaxrs-json-provider</artifactId>
-			<version>2.10.1</version>
-		</dependency>
-		<dependency>
-		  <groupId>javax.xml.ws</groupId>
-		  <artifactId>jaxws-api</artifactId>
-		  <version>2.3.1</version>
-		</dependency>
-	</dependencies>
 
 	<modules>
 		<module>examples/com.mycorp.examples.student</module>
@@ -312,7 +206,7 @@
 					<version>${tycho-version}</version>
 					<dependencies>
 						<dependency>
-							<groupId>org.eclipse.tycho.extras</groupId>
+							<groupId>org.eclipse.tycho</groupId>
 							<artifactId>tycho-buildtimestamp-jgit</artifactId>
 							<version>${tycho-version}</version>
 						</dependency>
